@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.DetailArticleFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_articleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/article_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_articlePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/article_price"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_articleName" />
+
+        <TextView
+            android:id="@+id/tv_priceSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/money_symbol"
+            app:layout_constraintLeft_toRightOf="@id/tv_articlePrice"
+            app:layout_constraintTop_toBottomOf="@id/tv_articleName" />
+
+        <TextView
+            android:id="@+id/tv_articleDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/article_description"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_articlePrice" />
+
+        <RatingBar
+            android:id="@+id/rb_articleNotation"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/tv_articleDescription"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_articleName"
+            tools:rating="3"/>
+
+
+        <ImageButton
+            android:id="@+id/IB_url"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/planete"
+            app:layout_constraintBottom_toBottomOf="@id/btn_action"
+            app:layout_constraintTop_toTopOf="@id/btn_action"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn_action"
+            android:background="@color/grey"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <ToggleButton
+            android:id="@+id/btn_action"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/IB_url"
+            android:textOn="@string/action_on"
+            android:textOff="@string/action_off"
+            android:background="@color/grey"
+            android:layout_margin="5dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</FrameLayout>

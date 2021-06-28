@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NewArticleActivity"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/TV_newArticleName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/ET_newArticleName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/ET_newArticleName"
+        android:text="@string/LabelArticleName"
+        />
+
+    <EditText
+        android:id="@+id/ET_newArticleName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/TV_newArticleName"
+        />
+
+    <TextView
+        android:id="@+id/TV_newArticlePrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/ET_newArticlePrice"
+        app:layout_constraintBottom_toBottomOf="@id/ET_newArticlePrice"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/ET_newArticlePrice"
+        android:text="@string/LabelArticlePrice"
+        />
+
+
+    <EditText
+        android:id="@+id/ET_newArticlePrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ET_newArticleName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/TV_newArticlePrice"
+        android:inputType="number"
+        />
+
+    <TextView
+        android:id="@+id/TV_newArticleDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ET_newArticleDesc"
+        app:layout_constraintBottom_toBottomOf="@id/ET_newArticleDesc"
+        app:layout_constraintRight_toLeftOf="@id/ET_newArticleDesc"
+        android:text="@string/LabelArticleDesc"
+        />
+
+    <EditText
+        android:id="@+id/ET_newArticleDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ET_newArticlePrice"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/TV_newArticleDesc"
+        android:lines="5"
+        android:scrollbars="vertical"/>
+
+    <TextView
+        android:id="@+id/TV_newArticleRating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/RB_newArticleNotation"
+        app:layout_constraintBottom_toBottomOf="@id/RB_newArticleNotation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/RB_newArticleNotation"
+        android:text="@string/LabelArticleRating"
+        />
+
+    <RatingBar
+        android:id="@+id/RB_newArticleNotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ET_newArticleDesc"
+        app:layout_constraintLeft_toRightOf="@id/TV_newArticleRating"
+        android:numStars="5"
+        />
+
+    <TextView
+        android:id="@+id/TV_newArticleUrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ET_newArticleUrl"
+        app:layout_constraintBottom_toBottomOf="@id/ET_newArticleUrl"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/ET_newArticleUrl"
+        android:text="@string/LabelArticleUrl"
+        />
+
+    <EditText
+        android:id="@+id/ET_newArticleUrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/RB_newArticleNotation"
+        app:layout_constraintLeft_toRightOf="@id/TV_newArticleUrl"/>
+
+    <Button
+        android:id="@+id/BT_addArticle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/BT_abord"
+        android:text="@string/LabelButtonAdd"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"/>
+
+    <Button
+        android:id="@+id/BT_abord"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/BT_addArticle"
+        android:text="@string/LabelButtonAbord"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

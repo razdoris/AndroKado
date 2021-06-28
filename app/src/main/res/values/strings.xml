@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">AndroKado</string>
+    <string name="article_name">Pain au chocolat</string>
+    <string name="article_description">Une viennoiserie au beurre et au chocolat</string>
+    <string name="article_price">1.0</string>
+    <string name="money_symbol">€</string>
+    <string name="action_on">acheté</string>
+    <string name="action_off">a acheté</string>
+    <string name="title_activity_detail">detailActivity</string>
+    <string name="tri_price">Tri par prix</string>
+    <string name="default_price_label">Prix par defaut</string>
+    <string name="default_price">50</string>
+    <string name="LabelArticleName">Nom de l\'article</string>
+    <string name="LabelArticlePrice">Prix </string>
+    <string name="LabelArticleDesc">Description</string>
+    <string name="LabelArticleRating">Note (sur 5)</string>
+    <string name="LabelArticleUrl">url de la boutique</string>
+    <string name="LabelButtonAdd">ajouter</string>
+    <string name="LabelButtonAbord">annuler</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
