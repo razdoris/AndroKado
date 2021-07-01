@@ -40,7 +40,7 @@ public class ArticleDAO {
         };
 
         String tri;
-        if(triPrix == true){
+        if(triPrix){
             tri = BaseContrat.ArticleContrat.COLONNE_PRICE + " ASC";
         }else {
             tri = null;

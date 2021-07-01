@@ -1,5 +1,6 @@
 package fr.eni.androkado.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
 
@@ -7,13 +8,18 @@ import fr.eni.androkado.R;
 import fr.eni.androkado.metier.dao.ArticleDAO;
 import fr.eni.androkado.metier.dto.ArticleDTO;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
+
+import org.parceler.Parcels;
 
 public class NewArticleActivity extends AppCompatActivity {
 
@@ -31,16 +37,8 @@ public class NewArticleActivity extends AppCompatActivity {
         TextView textViewNewArticlePrice = findViewById(R.id.ET_newArticlePrice);
         RatingBar ratingBarNewArticleRating = findViewById(R.id.RB_newArticleNotation);
         Button buttonAddNewArticle = findViewById(R.id.BT_addArticle);
-        Button buttonAbordNewArticle = findViewById(R.id.BT_abord);
 
         textViewNewArticlePrice.setText(String.valueOf(defaultPrice));
-
-        buttonAbordNewArticle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                returnToMain(v);
-            }
-        });
 
         buttonAddNewArticle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,14 +55,30 @@ public class NewArticleActivity extends AppCompatActivity {
                 ArticleDAO.addArticle(articleDTO,v.getContext());
 
 
-                returnToMain(v);
+                returnToMain(v.getContext());
             }
         });
 
     }
 
-    private final void returnToMain(View v) {
-        Intent intent = new Intent(v.getContext(), MainActivity.class);
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.actionbar_retour_menu,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.actionReturn){
+            returnToMain(this);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void returnToMain(Context c) {
+        Intent intent = new Intent(c, MainActivity.class);
         startActivity(intent);
 
     }

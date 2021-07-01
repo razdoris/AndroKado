@@ -16,7 +16,11 @@
     <string name="LabelArticleRating">Note (sur 5)</string>
     <string name="LabelArticleUrl">url de la boutique</string>
     <string name="LabelButtonAdd">ajouter</string>
-    <string name="LabelButtonAbord">annuler</string>
+    <string name="LabelButtonDelete">supprimer</string>
+    <string name="LabelButtonModify">enregistrer</string>
+    <string name="LabelButtonReturn">Retour</string>
+    <string name="LabelButtonStartModify">modifier</string>
+    <string name="LabelButtonsend">envoyer</string>
     <!--
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ModifyArticleActivity"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/TV_modifyArticleName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/ET_modifyArticleName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/ET_modifyArticleName"
+        android:text="@string/LabelArticleName"
+        />
+
+    <EditText
+        android:id="@+id/ET_modifyArticleName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/TV_modifyArticleName"
+        />
+
+    <TextView
+        android:id="@+id/TV_modifyArticlePrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/ET_modifyArticlePrice"
+        app:layout_constraintBottom_toBottomOf="@id/ET_modifyArticlePrice"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/ET_modifyArticlePrice"
+        android:text="@string/LabelArticlePrice"
+        />
+
+
+    <EditText
+        android:id="@+id/ET_modifyArticlePrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ET_modifyArticleName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/TV_modifyArticlePrice"
+        android:inputType="number"
+        />
+
+    <TextView
+        android:id="@+id/TV_modifyArticleDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ET_modifyArticleDesc"
+        app:layout_constraintBottom_toBottomOf="@id/ET_modifyArticleDesc"
+        app:layout_constraintRight_toLeftOf="@id/ET_modifyArticleDesc"
+        android:text="@string/LabelArticleDesc"
+        />
+
+    <EditText
+        android:id="@+id/ET_modifyArticleDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ET_modifyArticlePrice"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/TV_modifyArticleDesc"
+        android:lines="5"
+        android:scrollbars="vertical"/>
+
+    <TextView
+        android:id="@+id/TV_modifyArticleRating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/RB_modifyArticleNotation"
+        app:layout_constraintBottom_toBottomOf="@id/RB_modifyArticleNotation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/RB_modifyArticleNotation"
+        android:text="@string/LabelArticleRating"
+        />
+
+    <RatingBar
+        android:id="@+id/RB_modifyArticleNotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ET_modifyArticleDesc"
+        app:layout_constraintLeft_toRightOf="@id/TV_modifyArticleRating"
+        android:numStars="5"
+        />
+
+    <TextView
+        android:id="@+id/TV_modifyArticleUrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ET_modifyArticleUrl"
+        app:layout_constraintBottom_toBottomOf="@id/ET_modifyArticleUrl"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/ET_modifyArticleUrl"
+        android:text="@string/LabelArticleUrl"
+        />
+
+    <EditText
+        android:id="@+id/ET_modifyArticleUrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/RB_modifyArticleNotation"
+        app:layout_constraintLeft_toRightOf="@id/TV_modifyArticleUrl"/>
+
+    <Button
+        android:id="@+id/BT_modifyArticleSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/BT_modifyArticleDelete"
+        android:text="@string/LabelButtonModify"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"/>
+
+    <Button
+        android:id="@+id/BT_modifyArticleDelete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/BT_modifyArticleSave"
+        android:text="@string/LabelButtonDelete"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

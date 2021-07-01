@@ -1,12 +1,16 @@
 package fr.eni.androkado.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Switch;
@@ -57,9 +61,22 @@ public class ConfigurationActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.actionbar_retour_menu,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+       if(item.getItemId() == R.id.actionReturn){
+            Intent intentNew = new Intent(this, MainActivity.class);
+            startActivity(intentNew);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

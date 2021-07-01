@@ -35,7 +35,6 @@ public class KadoAdapter extends RecyclerView.Adapter<KadoAdapter.KadoViewHolder
     public KadoAdapter(List<ArticleDTO> listArticles, MainActivity mainActivity) {
         this.listArticles = listArticles;
         this.mainActivity = mainActivity;
-        Log.i(TAG,"ça passe ici");
     }
 
     @NonNull
@@ -43,8 +42,6 @@ public class KadoAdapter extends RecyclerView.Adapter<KadoAdapter.KadoViewHolder
     public KadoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
     {
         View viewArticle = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_kado, parent, false);
-
-        Log.i(TAG,"ça passe ici aussi");
         return new KadoViewHolder(viewArticle);
 
     }
@@ -54,9 +51,6 @@ public class KadoAdapter extends RecyclerView.Adapter<KadoAdapter.KadoViewHolder
     {
         holder.textViewArticleName.setText(listArticles.get(position).name);
         holder.ratingBarArticle.setRating((float) listArticles.get(position).rating);
-        Log.i(TAG,"ça passe ici aussi je pense");
-
-
     }
 
     @Override
@@ -69,15 +63,12 @@ public class KadoAdapter extends RecyclerView.Adapter<KadoAdapter.KadoViewHolder
         public TextView textViewArticleName;
         public RatingBar ratingBarArticle;
 
-
-
         public KadoViewHolder(@NonNull View itemView)
         {
             super(itemView);
             textViewArticleName = itemView.findViewById(R.id.tv_articleName);
             ratingBarArticle = itemView.findViewById(R.id.rb_articleNotation);
 
-            //ajout d'un listener
             itemView.setOnClickListener(v -> {
                 ArticleDTO article = listArticles.get(getAdapterPosition());
 
@@ -96,9 +87,6 @@ public class KadoAdapter extends RecyclerView.Adapter<KadoAdapter.KadoViewHolder
                     intent.putExtra(InfoUrlActivity.EXTRA_OBJECT, Parcels.wrap(article));
                     itemView.getContext().startActivity(intent);
                 }
-
-
-
             });
 
         }

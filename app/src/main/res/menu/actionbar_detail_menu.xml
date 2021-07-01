@@ -6,12 +6,18 @@
     <item
         android:id="@+id/actionModify"
         android:icon="@android:drawable/ic_menu_edit"
-        android:title="add"
+        android:title="@string/LabelButtonStartModify"
         app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/actionReturn"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:title="@string/LabelButtonReturn"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/actionSend"
         android:icon="@android:drawable/ic_menu_send"
-        android:title="configuration"
+        android:title="@string/LabelButtonsend"
         app:showAsAction="ifRoom"/>
 </menu>
